@@ -8,18 +8,21 @@ let basket = [];
 //function 'addItem' & input parameter for a string 'item'
 function addItem(item) { 
     let newList = basket.push(item); //variable that adds new item to basket
-    if (newList < 0) {
-        return false;
-    } else {
-        return true;
-    }
+    let s = 0;
+        if (typeof item === 'string') {
+            s = 1;
+            return true;
+        } else {
+            return false;
+        }
 }
+
 //call to test
 console.log(`items in basket: ${basket}`);
 console.log('Added peppers (output true)', addItem('peppers'));
 console.log(`items in basket now: ${basket}`);
 console.log('Added carrots (output true)', addItem('carrots'));
-console.log('Added berries (output true)', addItem());
+console.log(`items in basket now: ${basket}`);
 
 //function 'listItems'
 
