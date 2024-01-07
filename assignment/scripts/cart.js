@@ -5,13 +5,28 @@ console.log('***** Cart Functions *****');
 //global variable 'basket' with empty array
 let basket = [];
 
+//function 'addItem' & input parameter for a string 'item'
+function addItem(item) { 
+    let newList = basket.push(item); //variable that adds new item to basket
+    if (newList < 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+//call to test
+console.log(`items in basket: ${basket}`);
+console.log('Added peppers (output true)', addItem('peppers'));
+console.log(`items in basket now: ${basket}`);
+console.log('Added carrots (output true)', addItem('carrots'));
+console.log('Added berries (output true)', addItem());
+
+//function 'listItems'
+
+//loop items in basket array
 
 
-
-
-
-
-
+//function 'empty'
 
 
 // DO NOT MODIFY
