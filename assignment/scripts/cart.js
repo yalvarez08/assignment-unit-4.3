@@ -25,12 +25,21 @@ console.log('Added carrots (output true)', addItem('carrots'));
 console.log(`items in basket now: ${basket}`);
 
 //function 'listItems'
-
-//loop items in basket array
+function listItems() {
+    for (i in basket) { //items in basket array using for...in loop
+        console.log(basket[i]);
+    }
+}
+//call the function to display items in console
+listItems();
 
 
 //function 'empty'
-
+function empty() { 
+    basket.splice(0, basket.length); //reset basket to empty array
+}
+empty();
+console.log(`basket has been emptied. basket is now: ${basket}`);
 
 // DO NOT MODIFY
 // Used for automated testing
